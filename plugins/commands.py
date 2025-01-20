@@ -657,6 +657,9 @@ async def save_caption(client, message):
     chat_type = message.chat.type
     if chat_type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         return await message.reply_text("<b>ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ...</b>")
+    
+    default_caption = "<b>backupzone</b>\n\n\n\n𝖩𝗈𝗂𝗇➥ <a href='https://t.me/Xbackupzonez'>Xbackupzonez</a>"
+    
     try:
         caption = message.text.split(" ", 1)[1]
     except:
